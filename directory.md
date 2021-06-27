@@ -1,0 +1,8 @@
+- 01: variables
+- 02: functions
+- 03: conditionals
+- 04: lists
+- 05: for
+- 06:
+- 07:
+- 08:
