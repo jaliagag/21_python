@@ -28,14 +28,16 @@ currentField = [[" ", " ", " "],
 drawField(currentField)
 while(counter < 9):
     print("players turn (values 1-3):",player)
+
     moveRow = int(input("enter row: "))
-    if moveRow is not range(1,3):
+    if moveRow not in [1,2,3]:
         print("error - values 1, 2 or 3")
-        moveRow
+        break
+
     moveColumn= int(input("enter column: "))
-    if moveColumn is not range(1,3):
+    if moveColumn not in [1,2,3]:
         print("error - values 1, 2 or 3")
-        moveColumn
+        break
 
     if player == 1:
         # make move for player 1
@@ -54,8 +56,10 @@ while(counter < 9):
             player = 1
         else: 
             print("error - box is NOT empty, please, use your eyes")
-    counter += 1
-    print("play",counter)
+
+
+    counter += 1    
+    print(">>>>>>>>>play "+str(counter)+"/9")
     drawField(currentField)
 
 print("The end!")
