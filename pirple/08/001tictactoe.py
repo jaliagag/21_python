@@ -22,9 +22,7 @@ def drawField(field):
 #drawField()
 counter = 0
 player = 1
-currentField = [[" ", " ", " "],
-                [" ", " ", " "], 
-                [" ", " ", " "]]
+currentField = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]]
 drawField(currentField)
 while(counter < 9):
     print("players turn (values 1-3):",player)
@@ -57,9 +55,8 @@ while(counter < 9):
         else: 
             print("error - box is NOT empty, please, use your eyes")
 
-
     counter += 1    
-    print(">>>>>>>>>play "+str(counter)+"/9")
+    print(">>>>>>play "+str(counter)+"/9")
     drawField(currentField)
 
 print("The end!")
