@@ -31,25 +31,41 @@ leField = [
         [" "," "," "," "," "," "," "],
         ]
 
+# first view of the field
+drawField(leField)
+
 while(counter < 49):
     print("")
 
     insertPiece = int(input("Which column are you going to put your piece? "))
     
     if player == 1:
-        if leField[insertPiece] == " ":
-            leField[insertPiece] = "X"
-            player = 2
+        pieces_order(inserPiece)
+        player = 2
 
     if player == 2:
-         if leField[insertPiece] == " ":
-            leField[insertPiece] = "O"
-            player = 1
+        pieces_order(inserPiece)
+        player = 1
 
     counter += 1 
 
     drawField(leField)
 
+
+def pieces_order(column):
+    for pieces in range(6,-1,-1):
+        if leField[pieces][column] == " ":
+            if player == 1:
+                print("X")
+                break
+            if player == 2:
+                print("O")
+                break
+
+
+
 # winning conditions
+
+
 
 
